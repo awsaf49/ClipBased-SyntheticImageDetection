@@ -1,0 +1,8 @@
+huggingface-hub>=0.23.0
+timm>=0.9.10
+scikit-learn
+pandas
+open_clip_torch
+tqdm
+scipy
+pyyaml 

@@ -1,0 +1,35 @@
+2025-05-21 23:02:18,605 - INFO - Starting training with args: Namespace(batch_size=32, epochs=50, lr=0.0001, weight_decay=0.0001, pretrain='clipL14commonpool', num_workers=4, save_dir='checkpoints', resizeSize=-1, loadSize=-1, cropSize=-1, no_random_crop=False, resize_prob=0.0, jitter_prob=0.0, colordist_prob=0.0, cutout_prob=0.0, noise_prob=0.0, blur_prob=0.0, cmp_prob=0.0, rot90_prob=1.0, no_flip=False, hpf_prob=0.0, rz_interp='bilinear', blur_sig='0.5', cmp_method='cv2', cmp_qual='75', resize_size=256, resize_ratio=1.0, norm_type='resnet', num_views=0)
+2025-05-21 23:02:19,187 - INFO - Using device: cuda
+2025-05-21 23:02:19,346 - INFO - Loaded ViT-L-14 model config.
+2025-05-21 23:02:21,843 - INFO - Loading pretrained ViT-L-14 weights (/home/awsaf/.cache/huggingface/hub/models--laion--CLIP-ViT-L-14-CommonPool.XL-s13B-b90K/snapshots/d979a50bf428edbb14b32c4dce7da2d49f7f46ed/open_clip_pytorch_model.bin).
+2025-05-21 23:02:23,028 - INFO - 
+Epoch 1/50
+2025-05-21 23:03:56,154 - INFO - Training - Loss: 0.6598, Accuracy: 94.56%
+2025-05-21 23:06:18,270 - INFO - Validation - Loss: 0.6629, Accuracy: 70.79%
+2025-05-21 23:06:18,272 - INFO - Saved best model with validation accuracy: 70.79%
+2025-05-21 23:06:18,272 - INFO - 
+Epoch 2/50
+2025-05-21 23:07:51,697 - INFO - Training - Loss: 0.5992, Accuracy: 98.51%
+2025-05-21 23:10:13,664 - INFO - Validation - Loss: 0.6400, Accuracy: 69.97%
+2025-05-21 23:10:13,664 - INFO - 
+Epoch 3/50
+2025-05-21 23:11:47,095 - INFO - Training - Loss: 0.5450, Accuracy: 98.65%
+2025-05-21 23:14:08,591 - INFO - Validation - Loss: 0.6196, Accuracy: 69.87%
+2025-05-21 23:14:08,591 - INFO - 
+Epoch 4/50
+2025-05-21 23:15:41,943 - INFO - Training - Loss: 0.4968, Accuracy: 98.75%
+2025-05-21 23:18:03,630 - INFO - Validation - Loss: 0.6025, Accuracy: 69.72%
+2025-05-21 23:18:03,630 - INFO - 
+Epoch 5/50
+2025-05-21 23:19:37,097 - INFO - Training - Loss: 0.4535, Accuracy: 98.75%
+2025-05-21 23:21:57,977 - INFO - Validation - Loss: 0.5892, Accuracy: 69.37%
+2025-05-21 23:21:57,977 - INFO - 
+Epoch 6/50
+2025-05-21 23:23:31,275 - INFO - Training - Loss: 0.4142, Accuracy: 98.79%
+2025-05-21 23:25:53,173 - INFO - Validation - Loss: 0.5776, Accuracy: 69.35%
+2025-05-21 23:25:53,174 - INFO - 
+Epoch 7/50
+2025-05-21 23:27:26,570 - INFO - Training - Loss: 0.3796, Accuracy: 98.80%
+2025-05-21 23:29:48,607 - INFO - Validation - Loss: 0.5682, Accuracy: 69.18%
+2025-05-21 23:29:48,607 - INFO - 
+Epoch 8/50

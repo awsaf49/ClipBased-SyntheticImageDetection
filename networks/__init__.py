@@ -45,7 +45,7 @@ def count_parameters(model):
 
 def load_weights(model, model_path):
     from torch import load
-    dat = load(model_path, map_location='cpu')
+    dat = load(model_path, map_location='cpu', weights_only=False)
     if 'model' in dat:
         if ('module._conv_stem.weight' in dat['model']) or \
            ('module.fc.fc1.weight' in dat['model']) or \

@@ -10,4 +10,6 @@ RUN pip install huggingface-hub>=0.23.0 timm>=0.9.10 scikit-learn pandas open_cl
 ADD ./ /workdir
 WORKDIR /workdir
 
-ENTRYPOINT [ "python", "main.py" ]
+RUN pip install notebook
+
+ENTRYPOINT [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root" ]

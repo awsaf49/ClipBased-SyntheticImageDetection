@@ -76,6 +76,7 @@ cd data; bash synthbuster_download.sh; cd ..
 ```
 python main.py --in_csv data/commercial_tools.csv --out_csv out.csv --device 'cuda:0'
 ```
+python main.py --in_csv /data_in/commercial_tools.csv --out_csv ./out.csv --device 'cuda:0'
 
 3) Finally, calculate the AUC metrics:
 ```
@@ -87,6 +88,12 @@ To build the docker image, run the following command:
 ```
 docker build -t clipdet . -f Dockerfile
 ```
+
+Docker Run V2:
+```
+docker run -it --rm --gpus all -p 8888:8888 -v ${PWD}/data:/data_in -v ${PWD}/:/data_out clipdet
+```
+
 
 To get the results on Commercial Tools generators, it can be launched as follows:
 ```

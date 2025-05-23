@@ -1,0 +1,55 @@
+2025-05-22 00:11:32,483 - INFO - Starting training with args: Namespace(batch_size=128, epochs=20, lr=0.0001, weight_decay=0.0001, pretrain='clipL14commonpool', num_workers=4, save_dir='checkpoints', resizeSize=-1, loadSize=-1, cropSize=-1, no_random_crop=False, resize_prob=0.0, jitter_prob=0.0, colordist_prob=0.0, cutout_prob=0.0, noise_prob=0.0, blur_prob=0.0, cmp_prob=0.0, rot90_prob=1.0, no_flip=False, hpf_prob=0.0, rz_interp='bilinear', blur_sig='0.5', cmp_method='cv2', cmp_qual='75', resize_size=256, resize_ratio=1.0, norm_type='resnet', num_views=0)
+2025-05-22 00:11:33,055 - INFO - Using device: cuda
+2025-05-22 00:11:33,056 - INFO - Neither cropSize nor positive resizeSize specified via args. Defaulting to ensure cropSize=224 for model input consistency.
+2025-05-22 00:11:33,077 - INFO - Total training samples: 20000
+2025-05-22 00:11:33,077 - INFO - Training batch size: 128
+2025-05-22 00:11:33,077 - INFO - Calculated training steps per epoch: 157
+2025-05-22 00:11:33,077 - INFO - Total test samples: 24000
+2025-05-22 00:11:33,077 - INFO - Test batch size: 128
+2025-05-22 00:11:33,077 - INFO - Calculated test steps: 188
+2025-05-22 00:11:33,201 - INFO - Loaded ViT-L-14 model config.
+2025-05-22 00:11:35,738 - INFO - Loading pretrained ViT-L-14 weights (/home/awsaf/.cache/huggingface/hub/models--laion--CLIP-ViT-L-14-CommonPool.XL-s13B-b90K/snapshots/d979a50bf428edbb14b32c4dce7da2d49f7f46ed/open_clip_pytorch_model.bin).
+2025-05-22 00:11:37,014 - INFO - 
+Epoch 1/20
+2025-05-22 00:13:09,030 - INFO - Training - Loss: 0.6810, Accuracy: 69.50%, F1 (macro): 0.6638, AUC: 0.9694
+2025-05-22 00:15:03,805 - INFO - Validation - Loss: 0.6710, Accuracy: 89.10%, F1 (macro): 0.7312, AUC: 0.7858
+2025-05-22 00:15:03,807 - INFO - Saved best accuracy model with validation accuracy: 89.10%
+2025-05-22 00:15:03,807 - INFO - Saved best F1 model with validation F1: 0.7312
+2025-05-22 00:15:03,808 - INFO - Saved best AUC model with validation AUC: 0.7858
+2025-05-22 00:15:03,808 - INFO - 
+Epoch 2/20
+2025-05-22 00:16:34,964 - INFO - Training - Loss: 0.6591, Accuracy: 93.35%, F1 (macro): 0.9332, AUC: 0.9985
+2025-05-22 00:18:29,648 - INFO - Validation - Loss: 0.6616, Accuracy: 89.09%, F1 (macro): 0.7591, AUC: 0.8079
+2025-05-22 00:18:29,649 - INFO - Saved best F1 model with validation F1: 0.7591
+2025-05-22 00:18:29,650 - INFO - Saved best AUC model with validation AUC: 0.8079
+2025-05-22 00:18:29,650 - INFO - 
+Epoch 3/20
+2025-05-22 00:20:00,828 - INFO - Training - Loss: 0.6381, Accuracy: 95.39%, F1 (macro): 0.9538, AUC: 0.9992
+2025-05-22 00:21:55,648 - INFO - Validation - Loss: 0.6518, Accuracy: 87.95%, F1 (macro): 0.7529, AUC: 0.8191
+2025-05-22 00:21:55,649 - INFO - Saved best AUC model with validation AUC: 0.8191
+2025-05-22 00:21:55,649 - INFO - 
+Epoch 4/20
+2025-05-22 00:23:26,810 - INFO - Training - Loss: 0.6182, Accuracy: 96.49%, F1 (macro): 0.9649, AUC: 0.9992
+2025-05-22 00:25:21,610 - INFO - Validation - Loss: 0.6412, Accuracy: 87.38%, F1 (macro): 0.7473, AUC: 0.8228
+2025-05-22 00:25:21,611 - INFO - Saved best AUC model with validation AUC: 0.8228
+2025-05-22 00:25:21,611 - INFO - 
+Epoch 5/20
+2025-05-22 00:26:52,774 - INFO - Training - Loss: 0.5986, Accuracy: 96.91%, F1 (macro): 0.9690, AUC: 0.9994
+2025-05-22 00:28:47,450 - INFO - Validation - Loss: 0.6314, Accuracy: 87.03%, F1 (macro): 0.7459, AUC: 0.8241
+2025-05-22 00:28:47,451 - INFO - Saved best AUC model with validation AUC: 0.8241
+2025-05-22 00:28:47,451 - INFO - 
+Epoch 6/20
+2025-05-22 00:30:18,674 - INFO - Training - Loss: 0.5801, Accuracy: 96.97%, F1 (macro): 0.9697, AUC: 0.9993
+2025-05-22 00:32:13,436 - INFO - Validation - Loss: 0.6207, Accuracy: 86.96%, F1 (macro): 0.7457, AUC: 0.8281
+2025-05-22 00:32:13,437 - INFO - Saved best AUC model with validation AUC: 0.8281
+2025-05-22 00:32:13,437 - INFO - 
+Epoch 7/20
+2025-05-22 00:33:44,592 - INFO - Training - Loss: 0.5625, Accuracy: 96.90%, F1 (macro): 0.9690, AUC: 0.9995
+2025-05-22 00:35:39,369 - INFO - Validation - Loss: 0.6104, Accuracy: 86.72%, F1 (macro): 0.7414, AUC: 0.8277
+2025-05-22 00:35:39,370 - INFO - 
+Epoch 8/20
+2025-05-22 00:37:10,511 - INFO - Training - Loss: 0.5456, Accuracy: 96.94%, F1 (macro): 0.9694, AUC: 0.9995
+2025-05-22 00:39:05,330 - INFO - Validation - Loss: 0.6008, Accuracy: 86.94%, F1 (macro): 0.7463, AUC: 0.8283
+2025-05-22 00:39:05,331 - INFO - Saved best AUC model with validation AUC: 0.8283
+2025-05-22 00:39:05,331 - INFO - 
+Epoch 9/20
