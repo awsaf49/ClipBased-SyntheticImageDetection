@@ -1,7 +1,0 @@
-2025-05-21 23:44:09,375 - INFO - Starting training with args: Namespace(batch_size=32, epochs=50, lr=0.0001, weight_decay=0.0001, pretrain='clipL14commonpool', num_workers=4, save_dir='checkpoints', resizeSize=-1, loadSize=-1, cropSize=-1, no_random_crop=False, resize_prob=0.0, jitter_prob=0.0, colordist_prob=0.0, cutout_prob=0.0, noise_prob=0.0, blur_prob=0.0, cmp_prob=0.0, rot90_prob=1.0, no_flip=False, hpf_prob=0.0, rz_interp='bilinear', blur_sig='0.5', cmp_method='cv2', cmp_qual='75', resize_size=256, resize_ratio=1.0, norm_type='resnet', num_views=0)
-2025-05-21 23:44:09,952 - INFO - Using device: cuda
-2025-05-21 23:44:09,952 - INFO - Neither cropSize nor positive resizeSize specified via args. Defaulting to ensure cropSize=224 for model input consistency.
-2025-05-21 23:44:10,137 - INFO - Loaded ViT-L-14 model config.
-2025-05-21 23:44:12,688 - INFO - Loading pretrained ViT-L-14 weights (/home/awsaf/.cache/huggingface/hub/models--laion--CLIP-ViT-L-14-CommonPool.XL-s13B-b90K/snapshots/d979a50bf428edbb14b32c4dce7da2d49f7f46ed/open_clip_pytorch_model.bin).
-2025-05-21 23:44:14,001 - INFO - 
-Epoch 1/50

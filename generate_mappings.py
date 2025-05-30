@@ -33,29 +33,37 @@ def create_mapping_csv(input_csv, output_csv, root_dir, is_train=True):
                 })
     else:
         # Test set: real_* directories (real) vs other directories (synthetic)
-        test_dir = Path(root_dir)
+        test_dir = root_dir
+
+        test_df = pd.read_csv(os.path.join(test_dir, 'list_test.csv'))
+        for _, row in test_df.iterrows():
+            mapping_data.append({
+                'filename': row['filename'],
+                'label': 0 if 'real' in row['typ'] else 1,
+                 'category': row['typ'].split('@')[0],
+            })
         
-        # Process real images (label=0)
-        for real_dir in test_dir.glob('real_*'):
-            if real_dir.is_dir():
-                for img_path in real_dir.rglob('*'):
-                    if img_path.is_file() and img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-                        rel_path = os.path.relpath(img_path, root_dir)
-                        mapping_data.append({
-                            'filename': rel_path,
-                            'label': 0
-                        })
+        # # Process real images (label=0)
+        # for real_dir in test_dir.glob('real_*'):
+        #     if real_dir.is_dir():
+        #         for img_path in real_dir.rglob('*'):
+        #             if img_path.is_file() and img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
+        #                 rel_path = os.path.relpath(img_path, root_dir)
+        #                 mapping_data.append({
+        #                     'filename': rel_path,
+        #                     'label': 0
+        #                 })
         
-        # Process synthetic images (label=1)
-        for synth_dir in test_dir.glob('*'):
-            if synth_dir.is_dir() and not synth_dir.name.startswith('real_'):
-                for img_path in synth_dir.rglob('*'):
-                    if img_path.is_file() and img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-                        rel_path = os.path.relpath(img_path, root_dir)
-                        mapping_data.append({
-                            'filename': rel_path,
-                            'label': 1
-                        })
+        # # Process synthetic images (label=1)
+        # for synth_dir in test_dir.glob('*'):
+        #     if synth_dir.is_dir() and not synth_dir.name.startswith('real_'):
+        #         for img_path in synth_dir.rglob('*'):
+        #             if img_path.is_file() and img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
+        #                 rel_path = os.path.relpath(img_path, root_dir)
+        #                 mapping_data.append({
+        #                     'filename': rel_path,
+        #                     'label': 1
+        #                 })
     
     # Create and save mapping dataframe
     mapping_df = pd.DataFrame(mapping_data)

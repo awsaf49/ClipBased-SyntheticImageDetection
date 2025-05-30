@@ -162,18 +162,27 @@ cython_debug/
 
 data/
 
-# zip file
-/*.zip 
-/*.png 
-/*.jpg 
-/*.jpeg 
-/*.gif 
-/*.bmp 
-/*.tiff 
-/*.ico 
-/*.webp 
-/*.svg 
-/*.pdf 
+# Large files and datasets
+**/*.zip
+**/*.tar
+**/*.tar.gz
+**/*.rar
+**/*.7z
+**/*.bin
+**/*.pth
+**/*.onnx
+**/*.pt
+**/*.h5
+**/*.hdf5
+**/*.npy
+**/*.npz
+
+# Logs and cache
+logs/
+wandb/
+hf_cache/
+**/__pycache__/
+**/.DS_Store
 
 # Checkpoints
 checkpoints/
