@@ -174,3 +174,6 @@ data/
 /*.webp 
 /*.svg 
 /*.pdf 
+
+# Checkpoints
+checkpoints/
